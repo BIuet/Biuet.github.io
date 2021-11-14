@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A Toaster</title>
+    <meta name="description" content="Oh look a toaster." />
+    <meta name="theme-color" content="#666">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@700&display=swap" rel="stylesheet">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+      html {
+        overflow: hidden;
+      }
+      #canvas {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        position:relative;
+        background-color: black;
+      }
+      body {
+        background: #333;
+        font-family: 'Maven Pro';
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
+      .text{
+        background-color: white;
+        outline: none;
+        position: absolute;
+        border-radius: 5px;
+        border: 5px;
+        border-color: transparent;
+        font-size: larger;
+        padding:10px;
+        width: 50%;
+	      height: 50%;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        display:none;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="800" height="800"></canvas>
+    <div id="textholder" class="text"></div>
+    <script src= "canvas.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
