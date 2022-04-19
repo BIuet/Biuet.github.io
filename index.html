@@ -1,18 +1,100 @@
 <!DOCTYPE html>
-
 <html>
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="blueo, biuet, cookie">
-  <meta name="description" content="Nothing">
-  <link href="styles.css" rel="stylesheet" type="text/css">
-  <title></title>
-</head>
-
-<body>
- 	<canvas id="canvas" width="320" height="240"></canvas>
-	<script type="text/javascript" src="src/canvas.js"></script>
-</body>
+  <head>
+    <title>BIuet</title>
+    <meta name="description" content="Hi I'm BIuet, you might know me as cookies." />
+    <meta name="theme-color" content="#666">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+      html {
+        overflow: hidden;
+      }
+      #canvas {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        position:relative;
+        background-color: black;
+      }
+      body {
+        background: #333;
+        font-family: 'Maven Pro';
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
+      .navbar {
+        margin: 0;
+        width: 100%;
+        height: 15%;
+        overflow:hidden;
+      }
+      #logo:hover {
+	      color:#aaaaaa;
+	      text-decoration: none;
+	      transition:0.1s;
+        background-color:#444444;
+      }
+      .navbutton {
+        color: #aaaaaa;
+        display: block;
+        padding: 30px;
+        float:left;
+        text-decoration: none;
+        font-size:20px;
+      }
+      .logoLink {
+        color: #aaaaaa;
+        display: block;
+        padding: 0px;
+        float:left;
+        text-decoration: none;
+      }
+      .navbar a:hover {
+	      color:#aaaaaa;
+	      text-decoration: none;
+	      transition:0.1s;
+        background-color:#444444;
+      }
+      .text{
+        background-color: white;
+        outline: none;
+        position: absolute;
+        border-radius: 5px;
+        border: 5px;
+        border-color: transparent;
+        font-size: larger;
+        padding:10px;
+        width: 50%;
+	      height: 50%;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        display:none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="index.html" class="navbutton">Home</a>
+    </div>
+    <canvas id="canvas"></canvas>
+    <div id="textholder" class="text"></div>
+    <script src= "src/canvas.js"></script>
+  </body>
 </html>
