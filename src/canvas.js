@@ -14,10 +14,10 @@ let ticks = 0;
 function Z() {
     particles.update();
     ticks++;
-    if (ticks%2 == 0) particles.create(Math.abs((Math.random()*35))-Math.abs(Math.random()*5), 600, Math.random()*360, Math.random()*3);
+    if (ticks%2 == 0) particles.create(3+Math.abs((Math.random()*35)), 600, Math.random()*360, Math.random()*3);
     ticks = ticks > 60 ? 0 : ticks;
     ctx.save();
-
+    ctx.fillStyle = "#acc6d0";
     ctx.fillRect(0, 0, screen.width, screen.height);
     particles.draw();
     ctx.restore();
@@ -83,6 +83,7 @@ var particles = {
             ctx.beginPath();
             ctx.globalAlpha = part.life/100/5;
             ctx.fillRect(0, 0, part.size/2, part.size/2);
+            // displays lifetime of each particle.
             if (false && screen.mx > part.x &&
                 screen.mx < part.x + part.size/2 &&
                 screen.my > part.y &&
