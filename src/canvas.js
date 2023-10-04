@@ -13,10 +13,10 @@ let ticks = 0;
 function Z() {
     particles.update();
     ticks++;
-    if (ticks%2 == 0) particles.create(3+Math.abs((Math.random()*35)), 600, Math.random()*360, Math.random()*3);
+    if (ticks%15 == 0) particles.create(700+Math.abs((Math.random()*35)), 600, Math.random()*360, Math.random()*3);
     ticks = ticks > 60 ? 0 : ticks;
     ctx.save();
-    ctx.fillStyle = "#acc6d0";
+    ctx.fillStyle = "#9dd6e9";
     ctx.fillRect(0, 0, screen.width, screen.height);
     particles.draw();
     ctx.restore();
@@ -24,35 +24,9 @@ function Z() {
     requestAnimationFrame(Z);
 }
 
-var drawText = function(text, x, y, color, size=14, align="left") {
-    ctx.save();
-    let div = document.createElement('div');
-    document.body.appendChild(div);
-    div.style.font = 'bold '+(size)+'px Maven Pro'; div.style.padding = '0'; div.style.margin = '0'; div.style.position = 'absolute'; div.style.visibility = 'hidden'; div.innerHTML = text;
-    let measure = div.clientWidth;
-    ctx.font = div.style.font;
-    ctx.fillStyle = color;
-    ctx.globalAlpha = 1;
-    let x2 = x;
-    switch (align) {
-        case "left":
-            break;
-        case "center":
-            x2 = measure/2;
-            x2 = x-x2;
-            break;
-        case "right":
-            x2 -= measure;
-            break;
-    }
-    ctx.strokeText(text, x2, y);
-    ctx.fillText(text, x2, y);
-    div.remove();
-    ctx.restore();
-};
-
 var particles = {
     particles: [],
+    alt: 1,
     update: function() {
         for (let i = 0; i < this.particles.length; i++) {
             let part = this.particles[i];
@@ -78,15 +52,15 @@ var particles = {
             let part = this.particles[i];
             ctx.save();
             ctx.translate(part.x, part.y);
-            ctx.fillStyle = part.j == 1 ? "#8b0000" : "#111111";
+            ctx.fillStyle = part.j == 1 ? "#207491" : "#add8e6";
             ctx.beginPath();
             ctx.globalAlpha = part.life/100/5;
             ctx.fillRect(0, 0, part.size/2, part.size/2);
-            // displays lifetime of each particle.
+            // particle hitbox
             if (false && screen.mx > part.x &&
                 screen.mx < part.x + part.size/2 &&
                 screen.my > part.y &&
-                screen.my < part.y + part.size/2) drawText(part.life, 0, 0, "#FFFFFF", 14, "center");
+                screen.my < part.y + part.size/2)
             ctx.closePath();
             ctx.restore();
         }

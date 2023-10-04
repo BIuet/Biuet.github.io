@@ -44,55 +44,24 @@
         height: 13%;
         overflow:hidden;
         position:relative;
-        background-color:#ADD8E6;
-      }
-      #logo:hover {
-	      color:#aaaaaa;
-	      text-decoration: none;
-	      transition:0.1s;
-        background-color:#9bb5c0;
+        background-color:#207491;
       }
       .navbutton {
-        color: #6992a0;
+        color: #ADD8E6;
         display: block;
         padding: 25px;
         float:left;
         text-decoration: none;
         font-size:35px;
       }
-      .logoLink {
-        color: #9bb5c0;
-        display: block;
-        padding: 0px;
-        float:left;
-        text-decoration: none;
-      }
       .navbar a:hover {
-	      color:#FFFFFF;
+	      color:#207491;
 	      text-decoration: none;
 	      transition:0.1s;
-        background-color:#9bb5c0;
-      }
-      .text{
-        background-color: white;
-        outline: none;
-        position: absolute;
-        border-radius: 5px;
-        border: 5px;
-        border-color: transparent;
-        font-size: larger;
-        padding:10px;
-        width: 50%;
-	      height: 50%;
-        top:50%;
-        left:50%;
-        transform: translate(-50%, -50%);
-        background-color: white;
-        display:none;
+        background-color:#ADD8E6;
       }
       #textDiv {
         max-width: 36em;
-        display: block;
         margin:auto;
         padding-left: 0px;
       }
@@ -111,6 +80,8 @@
       #discordIconDiv {
         overflow: auto;
         height: 44px;
+        padding-left: 10px; 
+        display: inline-block;
       }
       #discordIcon:hover {
         background-color: rgba(0, 0, 0, 0);
@@ -136,13 +107,16 @@
       <a href="index.html" class="navbutton">Home</a>
     </div>
     <canvas id="canvas"></canvas>
-    <div id="textholder" class="text"></div>
     <script src= "src/canvas.js"></script>
     <div id="textDiv">
-      <h1 style="font-size: 5em; height: 2em;">
-        <span style="font-size: 2.5em; color: #beedfc; padding:0px;">Hi</span> I'm Biuet
+      <h1 style="font-size: 5em; height: 2em; display: inline;">
+        <span style="font-size: 2.5em; color: rgb(36, 144, 180); padding:0px;">Hi</span> I'm Biuet
       </h1>
-      <p style="font-size: 3em; padding-left: 10px;">I'm a young programmer who enjoys cookies.</p>
+      <!-- Slideshow? -->
+      <div style="padding-left: 10px; display: inline-block; margin: 0px 0px 40px 0px; height: 170px; max-height: 170px; min-height: 170px;">
+        <p id="slideshowtext" style="font-size: 3em; margin: 0px 0px 0px 0px;">I'm a young programmer who likes cookies.</p>
+      </div>
+
       <div id="discordIconDiv">
         <svg id="discordIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
           <path fill="none" d="M0 0h24v24H0z"></path>
