@@ -21,7 +21,7 @@ function Z() {
     particles.draw();
     ctx.restore();
 
-    requestAnimationFrame(Z);
+    requestAnimationFrame(Z)
 }
 
 var particles = {
